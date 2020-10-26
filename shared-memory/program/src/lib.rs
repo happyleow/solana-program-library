@@ -90,6 +90,7 @@ unsafe fn deserialize_input_parametes<'a>(input: *mut u8) -> Result<(&'a mut [u8
 ///
 /// # Safety
 #[no_mangle]
+#[cfg(not(feature = "exclude_entrypoint]"))]
 pub unsafe extern "C" fn entrypoint(input: *mut u8) -> u64 {
     match deserialize_input_parametes(input) {
         Ok((account_data, instruction_data)) => {

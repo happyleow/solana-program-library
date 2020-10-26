@@ -13,6 +13,7 @@ exclude = ["js/**"]
 
 [features]
 program = ["solana-sdk/program"]
+exclude_entrypoint = []
 default = ["solana-sdk/default"]
 
 [dependencies]
